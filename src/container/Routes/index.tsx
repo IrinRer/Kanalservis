@@ -16,7 +16,7 @@ const CreateRoutes: React.FC = () => {
           <Header />
           <Routes>
             <Route
-              index
+              path={ROUTES.home.path}
               element={
                 <PrivateRoute>
                   <Home />
