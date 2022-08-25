@@ -1,15 +1,15 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AxiosError } from "axios";
 import { fetchUsersAction } from "./thunk";
-import { IPayloadUsers, IUsersReducer, USERS_SLICE_ALIAS } from "./type";
+import {  IUserItem, IUsersReducer, USERS_SLICE_ALIAS } from "./type";
 
 const initialState: IUsersReducer = {
-  users: {},
+  users: [],
   loading: false,
   error: null,
 };
 
-export const UsersSlice = createSlice({
+export const usersSlice = createSlice({
   name: USERS_SLICE_ALIAS,
   initialState,
   reducers: {},
@@ -20,7 +20,7 @@ export const UsersSlice = createSlice({
     },
     [fetchUsersAction.fulfilled.type]: (
       state,
-      { payload }: PayloadAction<Array<IPayloadUsers>>
+      { payload }: PayloadAction<Array<IUserItem>>
     ) => {
       state.users = payload;
       state.loading = false;
@@ -29,15 +29,11 @@ export const UsersSlice = createSlice({
       state,
       { payload }: PayloadAction<AxiosError>
     ) => {
-      state.users = {
-        id: "",
-        name: "",
-        company: "",
-      };
+      state.users = [];
       state.loading = false;
       state.error = payload;
     },
   },
 });
 
-export default UsersSlice.reducer;
+export default usersSlice.reducer;

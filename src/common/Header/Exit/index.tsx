@@ -12,7 +12,7 @@ const Button = styled.button`
 const ExitComponent = () => {
   const dispatch = useAppDispatch();
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     dispatch(resetAuthorization());
   };
 

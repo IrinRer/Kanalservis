@@ -8,8 +8,7 @@ export const fetchUsersAction = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response: AxiosResponse = await api().get("/users");
-      console.log(response.data)
-      return response.data.data;
+      return response.data;
     } catch (error) {
       return rejectWithValue(error.message);
     }
