@@ -17,6 +17,7 @@ const Global = createGlobalStyle`
 
 const theme = {
   phone: "(max-width: 425px)",
+  tablet: "(max-width: 744px and min-width: 426px)"
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

@@ -8,6 +8,8 @@ import styled from 'styled-components';
 const Img = styled.img`
   width: 150px;
   height: 150px;
+  float: left;
+  margin-right: 30px;
 `;
 
 interface IProps {

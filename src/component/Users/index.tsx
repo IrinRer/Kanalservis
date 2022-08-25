@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   justify-content: center;
   margin-top: 20px;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 `;
 
 const Users = () => {
