@@ -10,13 +10,17 @@ const Img = styled.img`
   height: 150px;
 `;
 
-const Photos = ({ id }) => {
+interface IProps {
+  id: number;
+}
+
+const Photos: React.FC<IProps> = ({ id }) => {
   const dispatch = useAppDispatch();
   const photos = useAppSelector(getPhotos);
 
   useEffect(() => {
     dispatch(fetchPhotosAction(id));
-  }, [id]);
+  }, []);
 
   return (
     <>
