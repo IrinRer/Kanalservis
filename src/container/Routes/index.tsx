@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import { ROUTES } from "constants/routes";
 import Error from "common/Error";
 import ErrorBoundary from "container/ErrorBoundary";
@@ -10,7 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 
 const CreateRoutes: React.FC = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Suspense fallback="load...">
         <ErrorBoundary>
           <Header />
@@ -31,7 +31,7 @@ const CreateRoutes: React.FC = () => {
           </Routes>
         </ErrorBoundary>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
