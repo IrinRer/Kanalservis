@@ -5,9 +5,9 @@ import { PHOTOTS_SLICE_ALIAS } from './types';
 
 export const fetchPhotosAction = createAsyncThunk(
   `${PHOTOTS_SLICE_ALIAS}/fetch`,
-  async (_, { rejectWithValue }) => {
+  async (id: number, { rejectWithValue }) => {
     try {
-      const response: AxiosResponse = await api().get('/photos');
+      const response: AxiosResponse = await api().get(`/photos/${id}`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.message);

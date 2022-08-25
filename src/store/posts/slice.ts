@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AxiosError } from 'axios';
-import { IPostsItem, POSTS_SLICE_ALIAS } from './types';
+import { IPostsItem, POSTS_SLICE_ALIAS, IPostsReducer } from './types';
 import { fetchPostsAction } from './thunk';
 
-const initialState: any = {
+const initialState: IPostsReducer = {
   posts: [],
   loading: false,
   error: null,
