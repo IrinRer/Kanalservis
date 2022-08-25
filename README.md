@@ -1,3 +1,6 @@
+Login: react
+Password: qwerty
+
 # Стек
  1) React
  2) Redux (redux-toolkit, thunk)
