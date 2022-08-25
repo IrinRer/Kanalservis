@@ -1,11 +1,11 @@
 import { AUTHORIZATION_SLICE_ALIAS, IAuthSlice } from "./types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { LOGIN, PASSWORD } from "../../constants/common";
+import { getLoginFromEnv, getPasswordFromEnv } from "helpers/common";
 
 const initialState: IAuthSlice = {
   auth: "",
-  login: LOGIN,
-  password: PASSWORD,
+  login: getLoginFromEnv(),
+  password: getPasswordFromEnv(),
   inputLogin: undefined,
   inputPassword: undefined,
 };
