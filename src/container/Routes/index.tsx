@@ -1,0 +1,38 @@
+import React, { Suspense } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ROUTES } from "constants/routes";
+import PrivateRoute from "./PrivateRoute";
+import Error from "common/Error";
+import ErrorBoundary from "container/ErrorBoundary";
+import Header from "common/Header";
+import AuthPage from "pages/Auth";
+import Home from "pages/Home";
+
+const CreateRoutes: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Suspense fallback="load...">
+        <ErrorBoundary>
+          <Header />
+          <Routes>
+            <Route
+              index
+              element={
+                <PrivateRoute>
+                  <Home />
+                </PrivateRoute>
+              }
+            />
+            <Route path={ROUTES.auth.path} element={<AuthPage />} />
+            <Route
+              path={ROUTES.notFound.path}
+              element={<Error text="Страница не найдена" />}
+            />
+          </Routes>
+        </ErrorBoundary>
+      </Suspense>
+    </BrowserRouter>
+  );
+};
+
+export default CreateRoutes;
