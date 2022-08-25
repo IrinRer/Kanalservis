@@ -10,7 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 
 const CreateRoutes: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Suspense fallback="load...">
         <ErrorBoundary>
           <Header />
