@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "customHooks/redux/useAppDispatch";
 import { CREAM_COLOR, CREAM_COLOR_LIGHT } from "../../../constants/common";
 import { authorization } from "../../../store/auth/slice";
 
 const ButtonComponent = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const Button = styled.button`
     background-color: ${CREAM_COLOR};

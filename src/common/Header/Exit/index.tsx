@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "customHooks/redux/useAppDispatch";
 import { resetAuthorization } from "store/auth/slice";
 import { ReactComponent as Exit } from "../../../icons/exit.svg";
 
@@ -10,7 +10,7 @@ const Button = styled.button`
   }
 `;
 const ExitComponent = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleClick = (e) => {
     dispatch(resetAuthorization());

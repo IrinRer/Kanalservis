@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useAppDispatch } from "customHooks/redux/useAppDispatch";
+import { useAppSelector } from "customHooks/redux/useAppSelector";
 import styled from "styled-components";
 import ButtonComponent from "./Button";
 import { changeInputLogin, changeInputPassword } from "../../store/auth/slice";
@@ -54,11 +55,11 @@ const Input = styled.input`
 `;
 
 const Auth = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const refInput = useRef<any>();
-  const loginValue: string = useSelector(getLogin);
-  const isAuth: string = useSelector(getAuth);
-  const passwordValue: string = useSelector(getPassword);
+  const loginValue: string = useAppSelector(getLogin);
+  const isAuth: string = useAppSelector(getAuth);
+  const passwordValue: string = useAppSelector(getPassword);
 
   useEffect(() => {
     refInput.current.focus();

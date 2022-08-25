@@ -1,15 +1,15 @@
-import Users from "component/Users";
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { fetchUsersAction } from "store/users/thunk";
+import Users from 'component/Users';
+import { useAppDispatch } from 'customHooks/redux/useAppDispatch';
+import React, { useEffect } from 'react';
+import { fetchUsersAction } from 'store/users/thunk';
 
 const Home = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(fetchUsersAction());
-  })
-  return <Users/>;
+  });
+  return <Users />;
 };
 
 export default Home;
