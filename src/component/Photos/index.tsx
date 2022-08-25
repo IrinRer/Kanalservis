@@ -1,5 +1,5 @@
 import { MOBILE_SIZE } from 'constants/common';
-import { useWindowSize } from 'customHooks';
+import { useWindowSize } from 'customHooks/useWindowSize';
 import { useAppDispatch } from 'customHooks/redux/useAppDispatch';
 import { useAppSelector } from 'customHooks/redux/useAppSelector';
 import React, { useEffect } from 'react';

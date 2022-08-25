@@ -2,11 +2,11 @@ import React from 'react';
 import { useAppSelector } from 'customHooks/redux/useAppSelector';
 import styled from 'styled-components';
 import { CREAM_COLOR, MOBILE_SIZE, TABLE_SIZE } from '../../constants/common';
-import { useWindowSize } from '../../customHooks';
+import { useWindowSize } from '../../customHooks/useWindowSize';
 import { getLoginAuth } from '../../store/auth/selectors';
 import ExitComponent from './Exit';
-import { ReactComponent as Logo } from '../../icons/logo.svg';
-import { ReactComponent as LogoShort } from '../../icons/logo_short.svg';
+import { ReactComponent as Logo } from '../../assets/icons/logo.svg';
+import { ReactComponent as LogoShort } from '../../assets/icons/logo_short.svg';
 
 const Wrapper = styled.div`
   padding: 20px;

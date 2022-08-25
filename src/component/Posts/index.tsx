@@ -1,5 +1,5 @@
 import React from 'react';
-import { useWindowSize } from 'customHooks';
+import { useWindowSize } from 'customHooks/useWindowSize';
 import { MOBILE_SIZE } from 'constants/common';
 import styled from 'styled-components';
 import Title from './Title';
