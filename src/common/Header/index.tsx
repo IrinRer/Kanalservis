@@ -33,7 +33,7 @@ const Paragraph = styled.p`
   font-size: 24px;
   line-height: 29px;
   margin-right: 30px;
-`;
+`; 
 
 const Header = () => {
   const userName: string | undefined = useAppSelector(getLoginAuth);
