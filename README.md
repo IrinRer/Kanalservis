@@ -1,6 +1,6 @@
 # Стек
  1) React
- 2) Rudux (redux-toolkit, thunk)
+ 2) Redux (redux-toolkit, thunk)
  3) TypeScript
  4) Styled Component
  5) Axious
