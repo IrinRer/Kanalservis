@@ -5,9 +5,13 @@ import { useAppSelector } from 'customHooks/redux/useAppSelector';
 import { getUsers } from 'store/users/selectors';
 import { IUserItem } from 'store/users/types';
 import styled from 'styled-components';
+import Photos from 'component/Photos';
+import { useAppDispatch } from 'customHooks/redux/useAppDispatch';
+import { fetchPhotosAction } from 'store/photos/thunk';
 
 const Item = () => {
   const users = useAppSelector(getUsers);
+  const dispatch = useAppDispatch();
   const Wrapper = styled.div`
     width: 467px;
     padding: 30px;
@@ -23,13 +27,18 @@ const Item = () => {
   `;
   return (
     <>
-      {users.map((item: IUserItem) => (
+      {users.map((item: IUserItem) => {
+        // dispatch(fetchPhotosAction(item.id));
+
+       return (
         <Wrapper key={item.name}>
-          <Paragraph>Auth: {item.name}</Paragraph>
-          <Paragraph>Company: {item.company.name} </Paragraph>
-          <Posts id={item.id} />
-        </Wrapper>
-      ))}
+        <Paragraph>Auth: {item.name}</Paragraph>
+        <Paragraph>Company: {item.company.name} </Paragraph>
+        <Posts id={item.id} />
+        <Photos id={item.id}/>
+      </Wrapper>
+       )
+})}
     </>
   );
 };

@@ -22,7 +22,11 @@ export const usersSlice = createSlice({
       state,
       { payload }: PayloadAction<IPhotosItem>,
     ) => {
-      state.photos.push(payload);
+      const arr = state.photos.concat(payload);
+      state.photos = arr.filter(
+        (item: IPhotosItem, i: number) =>
+          arr.findIndex((a: IPhotosItem) => a.id === item.id) === i,
+      );
       state.loading = false;
     },
     [fetchPhotosAction.rejected.type]: (
