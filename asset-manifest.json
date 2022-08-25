@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Kanalservis/static/css/main.e6c13ad2.css",
+    "main.js": "/Kanalservis/static/js/main.6b57ca29.js",
+    "static/js/787.2a5a81f0.chunk.js": "/Kanalservis/static/js/787.2a5a81f0.chunk.js",
+    "static/media/logo.svg": "/Kanalservis/static/media/logo.f81ab97ff2c9865737dbb853a1a363b2.svg",
+    "static/media/logo_short.svg": "/Kanalservis/static/media/logo_short.24664b6fcc53325ca9e5b307a4a2dc60.svg",
+    "static/media/exit.svg": "/Kanalservis/static/media/exit.45ba992fad03b81503dece867cf0cf87.svg",
+    "index.html": "/Kanalservis/index.html",
+    "main.e6c13ad2.css.map": "/Kanalservis/static/css/main.e6c13ad2.css.map",
+    "main.6b57ca29.js.map": "/Kanalservis/static/js/main.6b57ca29.js.map",
+    "787.2a5a81f0.chunk.js.map": "/Kanalservis/static/js/787.2a5a81f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.6b57ca29.js"
+  ]
+}
