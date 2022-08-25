@@ -4,7 +4,7 @@ import AuthorizationReducer from './auth/slice';
 import PostsReducer from './posts/slice';
 import { IAuthSlice } from './auth/types';
 import UsersReducer from './users/slice';
-import { IUsersReducer } from './users/type';
+import { IUsersReducer } from './users/types';
 
 export const store = configureStore({
   reducer: {

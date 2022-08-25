@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AxiosError } from "axios";
 import { fetchUsersAction } from "./thunk";
-import {  IUserItem, IUsersReducer, USERS_SLICE_ALIAS } from "./type";
+import {  IUserItem, IUsersReducer, USERS_SLICE_ALIAS } from "./types";
 
 const initialState: IUsersReducer = {
   users: [],

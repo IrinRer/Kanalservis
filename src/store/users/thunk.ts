@@ -1,7 +1,7 @@
 import { api } from "network";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { AxiosResponse } from "axios";
-import { USERS_SLICE_ALIAS } from "./type";
+import { USERS_SLICE_ALIAS } from "./types";
 
 export const fetchUsersAction = createAsyncThunk(
   `${USERS_SLICE_ALIAS}/fetch`,

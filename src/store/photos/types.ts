@@ -1,0 +1,1 @@
+export const PHOTOTS_SLICE_ALIAS = 'photos';

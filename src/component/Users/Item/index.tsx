@@ -3,7 +3,7 @@ import Posts from 'component/Posts';
 import { BLUE_WATER } from 'constants/common';
 import { useAppSelector } from 'customHooks/redux/useAppSelector';
 import { getUsers } from 'store/users/selectors';
-import { IUserItem } from 'store/users/type';
+import { IUserItem } from 'store/users/types';
 import styled from 'styled-components';
 
 const Item = () => {
