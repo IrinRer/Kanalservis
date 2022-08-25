@@ -1,9 +1,9 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { getLoginFromEnv, getPasswordFromEnv } from "helpers/common";
-import { AUTHORIZATION_SLICE_ALIAS, IAuthSlice } from "./types";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { getLoginFromEnv, getPasswordFromEnv } from 'helpers/common';
+import { AUTHORIZATION_SLICE_ALIAS, IAuthSlice } from './types';
 
 const initialState: IAuthSlice = {
-  auth: "",
+  auth: '',
   login: getLoginFromEnv(),
   password: getPasswordFromEnv(),
   inputLogin: undefined,
@@ -19,9 +19,9 @@ export const authorizationSlice = createSlice({
         state.inputLogin === state.login &&
         state.inputPassword === state.password
       ) {
-        state.auth = "yes";
+        state.auth = 'yes';
       } else {
-        state.auth = "no";
+        state.auth = 'no';
       }
     },
     changeInputLogin: (state, action: PayloadAction<string>) => {

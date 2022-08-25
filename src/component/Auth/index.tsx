@@ -57,9 +57,9 @@ const Input = styled.input`
 const Auth = () => {
   const dispatch = useAppDispatch();
   const refInput = useRef<any>();
-  const loginValue: string = useAppSelector(getLogin);
+  const loginValue: string | undefined = useAppSelector(getLogin);
   const isAuth: string = useAppSelector(getAuth);
-  const passwordValue: string = useAppSelector(getPassword);
+  const passwordValue: string | undefined = useAppSelector(getPassword);
 
   useEffect(() => {
     refInput.current.focus();
