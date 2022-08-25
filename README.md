@@ -1,5 +1,5 @@
-Login: react
-Password: qwerty
+1. Login: react
+2. Password: qwerty
 
 # Стек
  1) React
