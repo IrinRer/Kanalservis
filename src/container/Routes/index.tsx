@@ -1,16 +1,16 @@
-import React, { Suspense } from "react";
-import { Routes, Route, HashRouter } from "react-router-dom";
-import { ROUTES } from "constants/routes";
-import Error from "common/Error";
-import ErrorBoundary from "container/ErrorBoundary";
-import Header from "common/Header";
-import AuthPage from "pages/Auth";
-import Home from "pages/Home";
-import PrivateRoute from "./PrivateRoute";
+import React, { Suspense } from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { ROUTES } from 'constants/routes';
+import Error from 'common/Error';
+import ErrorBoundary from 'container/ErrorBoundary';
+import Header from 'common/Header';
+import AuthPage from 'pages/Auth';
+import Home from 'pages/Home';
+import PrivateRoute from './PrivateRoute';
 
 const CreateRoutes: React.FC = () => {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Suspense fallback="load...">
         <ErrorBoundary>
           <Header />
@@ -31,7 +31,7 @@ const CreateRoutes: React.FC = () => {
           </Routes>
         </ErrorBoundary>
       </Suspense>
-    </HashRouter>
+    </BrowserRouter >
   );
 };
 
