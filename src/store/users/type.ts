@@ -9,3 +9,9 @@ export interface IUsersReducer {
   loading: boolean;
   error: AxiosError | null;
 }
+
+export interface IPayloadUsers {
+    id: string;
+    name: string;
+    nameCompany: string;
+}
