@@ -10,11 +10,10 @@ const Title: React.FC<IProps> = ({ id }) => {
   const posts = useAppSelector(getPosts);
   return (
     <div>
-      {' '}
       Title:
       {posts.map((item: IPostsItem) => {
         if (item.userId === id) {
-          return <span>{item.title}</span>;
+          return <span key={item.title}>{item.title}</span>;
         }
         return null;
       })}

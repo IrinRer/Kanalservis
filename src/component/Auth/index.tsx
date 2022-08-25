@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import { useAppDispatch } from "customHooks/redux/useAppDispatch";
-import { useAppSelector } from "customHooks/redux/useAppSelector";
-import styled from "styled-components";
-import ButtonComponent from "./Button";
-import { changeInputLogin, changeInputPassword } from "../../store/auth/slice";
-import { getAuth, getLogin, getPassword } from "../../store/auth/selectors";
+import React, { useEffect, useRef } from 'react';
+import { useAppDispatch } from 'customHooks/redux/useAppDispatch';
+import { useAppSelector } from 'customHooks/redux/useAppSelector';
+import styled from 'styled-components';
+import ButtonComponent from './Button';
+import { changeInputLogin, changeInputPassword } from '../../store/auth/slice';
+import { getAuth, getLogin, getPassword } from '../../store/auth/selectors';
 
 const Form = styled.form`
   padding: 20px 10px 10px 10px;
@@ -82,7 +82,7 @@ const Auth = () => {
           type="email"
           onChange={handleChangeLogin}
           value={loginValue}
-          color={isAuth !== "no" ? "none" : "red"}
+          color={isAuth !== 'no' ? 'none' : 'red'}
           ref={refInput}
         />
       </Label>
@@ -92,7 +92,7 @@ const Auth = () => {
           type="password"
           onChange={handleChangePassword}
           value={passwordValue}
-          color={isAuth !== "no" ? "none" : "red"}
+          color={isAuth !== 'no' ? 'none' : 'red'}
         />
       </Label>
       <ButtonComponent />

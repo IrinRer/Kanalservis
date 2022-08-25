@@ -22,7 +22,10 @@ export const usersSlice = createSlice({
       state,
       { payload }: PayloadAction<Array<IPostsItem>>,
     ) => {
-      state.posts = payload;
+      state.posts = payload.filter(
+        (item: IPostsItem, i: number) =>
+          payload.findIndex((a: IPostsItem) => a.userId === item.userId) === i,
+      );
       state.loading = false;
     },
     [fetchPostsAction.rejected.type]: (

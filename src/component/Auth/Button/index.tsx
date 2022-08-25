@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { useAppDispatch } from "customHooks/redux/useAppDispatch";
-import { CREAM_COLOR, CREAM_COLOR_LIGHT } from "../../../constants/common";
-import { authorization } from "../../../store/auth/slice";
+import React from 'react';
+import styled from 'styled-components';
+import { useAppDispatch } from 'customHooks/redux/useAppDispatch';
+import { CREAM_COLOR, CREAM_COLOR_LIGHT } from '../../../constants/common';
+import { authorization } from '../../../store/auth/slice';
 
 const ButtonComponent = () => {
   const dispatch = useAppDispatch();
