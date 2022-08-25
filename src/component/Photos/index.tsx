@@ -31,7 +31,7 @@ const Photos: React.FC<IProps> = ({ id }) => {
     <>
       {photos.map((item) => {
         if (item.id === id && windowSize.width > MOBILE_SIZE) {
-          return <Img src={item.thumbnailUrl} />;
+          return <Img src={item.thumbnailUrl} key={item.id}/>;
         }
         return null;
       })}

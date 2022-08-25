@@ -6,8 +6,8 @@ const initialState: IAuthSlice = {
   auth: '',
   login: getLoginFromEnv(),
   password: getPasswordFromEnv(),
-  inputLogin: undefined,
-  inputPassword: undefined,
+  inputLogin: '',
+  inputPassword: '',
 };
 
 export const authorizationSlice = createSlice({

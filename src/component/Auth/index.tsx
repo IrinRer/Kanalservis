@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useAppDispatch } from 'customHooks/redux/useAppDispatch';
 import { useAppSelector } from 'customHooks/redux/useAppSelector';
+import { BLUE_WATER, GRAY } from 'constants/common';
 import styled from 'styled-components';
 import ButtonComponent from './Button';
 import { changeInputLogin, changeInputPassword } from '../../store/auth/slice';
@@ -9,6 +10,7 @@ import { getAuth, getLogin, getPassword } from '../../store/auth/selectors';
 const Form = styled.form`
   padding: 20px 10px 10px 10px;
   text-align: center;
+  color: ${BLUE_WATER};
   width: 440px;
   font-weight: 800;
   margin: 100px auto;
@@ -31,6 +33,7 @@ const Label = styled.label`
   font-weight: 800;
   font-size: 24px;
   gap: 10px;
+  color: black;
   vertical-align: middle;
   @media ${(props) => props.theme.phone} {
     flex-direction: column;
@@ -44,6 +47,7 @@ const Input = styled.input`
   border-radius: 10px;
   padding: 3px;
   font-weight: 800;
+  background-color: ${GRAY};
   font-size: 24px;
   @media ${(props) => props.theme.phone} {
     width: 100%;
@@ -82,7 +86,7 @@ const Auth = () => {
           type="email"
           onChange={handleChangeLogin}
           value={loginValue}
-          color={isAuth !== 'no' ? 'none' : 'red'}
+          color={isAuth !== 'no' ? BLUE_WATER : 'red'}
           ref={refInput}
         />
       </Label>
@@ -92,7 +96,7 @@ const Auth = () => {
           type="password"
           onChange={handleChangePassword}
           value={passwordValue}
-          color={isAuth !== 'no' ? 'none' : 'red'}
+          color={isAuth !== 'no' ? BLUE_WATER : 'red'}
         />
       </Label>
       <ButtonComponent />

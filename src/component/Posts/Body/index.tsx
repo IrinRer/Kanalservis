@@ -17,7 +17,7 @@ const Paragraph = styled.p`
 const Body: React.FC<IProps> = ({ id }) => {
   const posts = useAppSelector(getPosts);
   return (
-    <Paragraph>
+    <Paragraph key={id}>
       {posts.map((item: IPostsItem) => {
         if (item.userId === id) {
           return item.body;

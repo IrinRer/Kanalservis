@@ -1,4 +1,6 @@
 import React from 'react';
+import { useWindowSize } from 'customHooks';
+import { MOBILE_SIZE } from 'constants/common';
 import styled from 'styled-components';
 import Title from './Title';
 import Body from './Body';
@@ -20,14 +22,18 @@ const WrapperBody = styled.div`
 `;
 
 const Posts: React.FC<IProps> = ({ id }) => {
+  const windowSize = useWindowSize();
+
   return (
     <>
       <WrapperTitle>
         <Title id={id} />
       </WrapperTitle>
-      <WrapperBody>
-        <Body id={id} />
-      </WrapperBody>
+      {windowSize.width > MOBILE_SIZE ? (
+        <WrapperBody>
+          <Body id={id} />
+        </WrapperBody>
+      ) : null}
     </>
   );
 };
