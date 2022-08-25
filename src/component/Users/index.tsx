@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   margin-top: 20px;
   flex-wrap: wrap;
   gap: 10px;
+  padding: 10px;
 `;
 
 const Users = () => {

@@ -1,3 +1,5 @@
+import { MOBILE_SIZE } from 'constants/common';
+import { useWindowSize } from 'customHooks';
 import { useAppDispatch } from 'customHooks/redux/useAppDispatch';
 import { useAppSelector } from 'customHooks/redux/useAppSelector';
 import React, { useEffect } from 'react';
@@ -18,6 +20,7 @@ interface IProps {
 
 const Photos: React.FC<IProps> = ({ id }) => {
   const dispatch = useAppDispatch();
+  const windowSize = useWindowSize();
   const photos = useAppSelector(getPhotos);
 
   useEffect(() => {
@@ -27,7 +30,7 @@ const Photos: React.FC<IProps> = ({ id }) => {
   return (
     <>
       {photos.map((item) => {
-        if (item.id === id) {
+        if (item.id === id && windowSize.width > MOBILE_SIZE) {
           return <Img src={item.thumbnailUrl} />;
         }
         return null;

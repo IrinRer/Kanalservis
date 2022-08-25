@@ -8,10 +8,10 @@ import { getAuth, getLogin, getPassword } from '../../store/auth/selectors';
 
 const Form = styled.form`
   padding: 20px 10px 10px 10px;
-  margin: 100px auto;
   text-align: center;
   width: 440px;
   font-weight: 800;
+  margin: 100px auto;
   font-size: 24px;
   display: flex;
   flex-direction: column;
@@ -21,8 +21,8 @@ const Form = styled.form`
   border-radius: 6px;
 
   @media ${(props) => props.theme.phone} {
-    width: 100%;
-    margin-top: 50px;
+    width: 90%;
+    margin: 50px auto;
   }
 `;
 const Label = styled.label`

@@ -8,17 +8,16 @@ import styled from 'styled-components';
 import Photos from 'component/Photos';
 
 const Wrapper = styled.div`
-  max-width: 467px;
+  width: 467px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  height: 388px;
   border: 5px solid ${BLUE_WATER};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 
   @media ${(props) => props.theme.tablet} {
-    width: 325px;
+    width: 40%;
   }
 `;
 const Paragraph = styled.p`
@@ -27,7 +26,12 @@ const Paragraph = styled.p`
   line-height: 30px;
 `;
 
-const WrapperParagraph = styled.div``;
+const WrapperParagraph = styled.div`
+  @media ${(props) => props.theme.tablet} {
+    display: flex;
+    flex-direction: column;
+  }
+`;
 
 const Item = () => {
   const users = useAppSelector(getUsers);
