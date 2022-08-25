@@ -1,6 +1,7 @@
+import React from 'react';
+import Posts from 'component/Posts';
 import { BLUE_WATER } from 'constants/common';
 import { useAppSelector } from 'customHooks/redux/useAppSelector';
-import React from 'react';
 import { getUsers } from 'store/users/selectors';
 import { IUserItem } from 'store/users/type';
 import styled from 'styled-components';
@@ -22,9 +23,10 @@ const Item = () => {
   return (
     <>
       {users.map((item: IUserItem) => (
-        <Wrapper>
+        <Wrapper key={item.name}>
           <Paragraph>Auth: {item.name}</Paragraph>
           <Paragraph>Company: {item.company.name} </Paragraph>
+          <Posts id={item.id}/>
         </Wrapper>
       ))}
     </>

@@ -1,6 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import Item from "./Item";
+import Posts from 'component/Posts';
+import React from 'react';
+import styled from 'styled-components';
+import Item from './Item';
 
 const Users = () => {
   const Wrapper = styled.div`
