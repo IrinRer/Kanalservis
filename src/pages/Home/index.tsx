@@ -1,7 +1,8 @@
+import Users from "component/Users";
 import React from "react";
 
 const Home = () => {
-  return <p>gggggggggg</p>;
+  return <Users/>;
 };
 
 export default Home;
