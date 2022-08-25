@@ -1,8 +1,8 @@
 import React from "react";
-import { ReactComponent as Exit } from "../../../icons/exit.svg";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { resetAuthorization } from "store/auth/slice";
+import { ReactComponent as Exit } from "../../../icons/exit.svg";
 
 const Button = styled.button`
   border: none;

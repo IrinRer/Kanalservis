@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import ButtonComponent from "./Button";
-import { useDispatch, useSelector } from "react-redux";
 import { changeInputLogin, changeInputPassword } from "../../store/auth/slice";
 import { getAuth, getLogin, getPassword } from "../../store/auth/selectors";
 

@@ -1,11 +1,12 @@
-import { ReactComponent as Logo } from "../../icons/logo.svg";
-import { ReactComponent as LogoShort } from "../../icons/logo_short.svg";
+import React from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { CREAM_COLOR, MOBILE_SIZE } from "../../constants/common";
 import { useWindowSize } from "../../customHooks";
 import { getLoginAuth } from "../../store/auth/selectors";
 import ExitComponent from "./Exit";
+import { ReactComponent as Logo } from "../../icons/logo.svg";
+import { ReactComponent as LogoShort } from "../../icons/logo_short.svg";
 
 const Header = () => {
   const userName: string = useSelector(getLoginAuth);

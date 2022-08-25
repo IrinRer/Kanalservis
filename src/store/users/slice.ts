@@ -1,12 +1,10 @@
-import { IPayloadUsers, IUsersReducer, USERS_SLICE_ALIAS } from "./type";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AxiosError } from "axios";
 import { fetchUsersAction } from "./thunk";
+import { IPayloadUsers, IUsersReducer, USERS_SLICE_ALIAS } from "./type";
 
 const initialState: IUsersReducer = {
-  id: "",
-  name: "",
-  company: "",
+  users: {},
   loading: false,
   error: null,
 };
@@ -22,20 +20,20 @@ export const UsersSlice = createSlice({
     },
     [fetchUsersAction.fulfilled.type]: (
       state,
-      { payload }: PayloadAction<IPayloadUsers>
+      { payload }: PayloadAction<Array<IPayloadUsers>>
     ) => {
-      state.id = payload.id;
-      state.name = payload.name;
-      state.company = payload.nameCompany;
+      state.users = payload;
       state.loading = false;
     },
     [fetchUsersAction.rejected.type]: (
       state,
       { payload }: PayloadAction<AxiosError>
     ) => {
-      state.id = "";
-      state.name = "";
-      state.company = "";
+      state.users = {
+        id: "",
+        name: "",
+        company: "",
+      };
       state.loading = false;
       state.error = payload;
     },

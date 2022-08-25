@@ -1,6 +1,6 @@
-import { AUTHORIZATION_SLICE_ALIAS, IAuthSlice } from "./types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { getLoginFromEnv, getPasswordFromEnv } from "helpers/common";
+import { AUTHORIZATION_SLICE_ALIAS, IAuthSlice } from "./types";
 
 const initialState: IAuthSlice = {
   auth: "",

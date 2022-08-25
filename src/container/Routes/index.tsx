@@ -1,12 +1,12 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ROUTES } from "constants/routes";
-import PrivateRoute from "./PrivateRoute";
 import Error from "common/Error";
 import ErrorBoundary from "container/ErrorBoundary";
 import Header from "common/Header";
 import AuthPage from "pages/Auth";
 import Home from "pages/Home";
+import PrivateRoute from "./PrivateRoute";
 
 const CreateRoutes: React.FC = () => {
   return (
