@@ -1,4 +1,4 @@
-Test task from the company Channel Service.
+Test task from the company Kanalservis.
 1. Login: react
 2. Password: qwerty
 
