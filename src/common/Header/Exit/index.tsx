@@ -7,7 +7,6 @@ import { ReactComponent as Exit } from '../../../assets/icons/exit.svg';
 const Button = styled.button`
   border: none;
   background: none;
-  }
 `;
 
 const ExitComponent = () => {

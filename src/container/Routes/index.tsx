@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { ROUTES } from 'constants/routes';
 import Error from 'common/Error';
@@ -11,7 +11,6 @@ import PrivateRoute from './PrivateRoute';
 const CreateRoutes: React.FC = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Suspense fallback="load...">
         <ErrorBoundary>
           <Header />
           <Routes>
@@ -30,7 +29,6 @@ const CreateRoutes: React.FC = () => {
             />
           </Routes>
         </ErrorBoundary>
-      </Suspense>
     </BrowserRouter >
   );
 };
