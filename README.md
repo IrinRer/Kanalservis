@@ -23,7 +23,7 @@ Install dependencies:
 npm i
 ```
 
-Runs the app in the development mode:
+Run the app in the development mode:
 
 ```
 npm start
