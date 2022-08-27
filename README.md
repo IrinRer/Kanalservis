@@ -1,18 +1,30 @@
+Test task from the company Channel Service.
 1. Login: react
 2. Password: qwerty
 
-# Стек
+## Technologies
  1) React
  2) Redux (redux-toolkit, thunk)
  3) TypeScript
  4) Styled Component
  5) Axious
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+Clone this repository:
 
-### `npm start`
+```
+git clone https://github.com/IrinRer/Kanalservis.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install dependencies:
+
+```
+npm i
+```
+
+Runs the app in the development mode:
+
+```
+npm start
+```
