@@ -1,8 +1,8 @@
+import UsersCardContainer from 'container/UsersCardContainer';
 import React from 'react';
 import styled from 'styled-components';
-import Item from './Item';
 
-const Wrapper = styled.div`
+const WrapperUsers = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -13,9 +13,9 @@ const Wrapper = styled.div`
 
 const Users = () => {
   return (
-    <Wrapper>
-      <Item />
-    </Wrapper>
+    <WrapperUsers>
+      <UsersCardContainer />
+    </WrapperUsers>
   );
 };
 

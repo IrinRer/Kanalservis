@@ -33,7 +33,7 @@ const WrapperParagraph = styled.div`
   }
 `;
 
-const Item = () => {
+const UsersCardContainer = () => {
   const users = useAppSelector(getUsers);
 
   return (
@@ -54,4 +54,4 @@ const Item = () => {
   );
 };
 
-export default Item;
+export default UsersCardContainer;
