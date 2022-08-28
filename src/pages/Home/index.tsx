@@ -10,7 +10,8 @@ const Home = () => {
   useEffect(() => {
     dispatch(fetchUsersAction());
     dispatch(fetchPostsAction());
-  });
+    // eslint-disable-next-line
+  }, []);
   return <Users />;
 };
 
