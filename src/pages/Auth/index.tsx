@@ -7,11 +7,10 @@ import { getAuth } from 'store/auth/selectors';
 
 const AuthPage = () => {
   const isAuth: string = useSelector(getAuth);
-  const isAutnInStorage = window.sessionStorage.getItem('auth');
 
   return (
     <>
-      {isAuth === 'yes' || isAutnInStorage === 'yes' ? (
+      {isAuth === 'yes' ? (
         <Navigate to={ROUTES.home.path} />
       ) : (
         <AuthContainer />
