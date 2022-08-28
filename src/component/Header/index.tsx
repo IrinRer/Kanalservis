@@ -1,11 +1,11 @@
+import { MOBILE_SIZE, TABLE_SIZE } from 'constants/common';
+import { useWindowSize } from 'customHooks/useWindowSize';
 import React from 'react';
 import styled from 'styled-components';
 import ExitComponent from './Exit';
 
 interface IProps {
   userName?: string;
-  mobile: boolean;
-  table: boolean;
 }
 
 const Paragraph = styled.p`
@@ -15,11 +15,13 @@ const Paragraph = styled.p`
   margin-right: 30px;
 `;
 
-const Header: React.FC<IProps> = ({ userName, mobile, table }) => {
+const Header: React.FC<IProps> = ({ userName }) => {
+  const size = useWindowSize();
+
   return (
     <>
-      {!table ? <Paragraph>{userName}</Paragraph> : null}
-      {!mobile ? <ExitComponent /> : null}
+      {size.width > TABLE_SIZE ? <Paragraph>{userName}</Paragraph> : null}
+      {size.width > MOBILE_SIZE ? <ExitComponent /> : null}
     </>
   );
 };

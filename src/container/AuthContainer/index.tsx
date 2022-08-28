@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { useAppDispatch } from 'customHooks/redux/useAppDispatch';
 import { useAppSelector } from 'customHooks/redux/useAppSelector';
 import { BLUE_WATER } from 'constants/common';
@@ -44,14 +44,9 @@ const Label = styled.label`
 
 const AuthContainer = () => {
   const dispatch = useAppDispatch();
-  const refInput = useRef<any>();
   const loginValue: string | undefined = useAppSelector(getLogin);
   const isAuth: string = useAppSelector(getAuth);
   const passwordValue: string | undefined = useAppSelector(getPassword);
-
-  useEffect(() => {
-    refInput.current.focus();
-  }, []);
 
   const handleChangeLogin = (e) => {
     dispatch(changeInputLogin(e.target.value));
@@ -70,6 +65,7 @@ const AuthContainer = () => {
           handleChange={handleChangeLogin}
           value={loginValue}
           color={isAuth !== 'no' ? BLUE_WATER : 'red'}
+          type='text'
         />
       </Label>
       <Label>
@@ -78,6 +74,7 @@ const AuthContainer = () => {
           handleChange={handleChangePassword}
           value={passwordValue}
           color={isAuth !== 'no' ? BLUE_WATER : 'red'}
+          type='password'
         />
       </Label>
       <ButtonContainer />

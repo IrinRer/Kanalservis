@@ -1,5 +1,5 @@
-import Auth from 'component/Auth';
 import { ROUTES } from 'constants/routes';
+import AuthContainer from 'container/AuthContainer';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router';
@@ -14,7 +14,7 @@ const AuthPage = () => {
       {isAuth === 'yes' || isAutnInStorage === 'yes' ? (
         <Navigate to={ROUTES.home.path} />
       ) : (
-        <Auth />
+        <AuthContainer />
       )}
     </>
   );
