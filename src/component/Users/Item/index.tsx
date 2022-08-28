@@ -5,7 +5,7 @@ import { useAppSelector } from 'customHooks/redux/useAppSelector';
 import { getUsers } from 'store/users/selectors';
 import { IUserItem } from 'store/users/types';
 import styled from 'styled-components';
-import Photos from 'component/Photos';
+import PhotosContainer from 'container/PhotosContainer';
 
 const Wrapper = styled.div`
   width: 467px;
@@ -42,7 +42,7 @@ const Item = () => {
         return (
           <Wrapper key={item.name}>
             <WrapperParagraph>
-              <Photos id={item.id} />
+              <PhotosContainer id={item.id} />
               <Paragraph>Auth: {item.name}</Paragraph>
               <Paragraph>Company: {item.company.name} </Paragraph>
             </WrapperParagraph>
