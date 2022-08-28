@@ -14,7 +14,7 @@ const Paragraph = styled.p`
   line-height: 19px;
 `;
 
-const Body: React.FC<IProps> = ({ id }) => {
+const BodyContainer: React.FC<IProps> = ({ id }) => {
   const posts = useAppSelector(getPosts);
   return (
     <Paragraph key={id}>
@@ -28,4 +28,4 @@ const Body: React.FC<IProps> = ({ id }) => {
   );
 };
 
-export default Body;
+export default BodyContainer;

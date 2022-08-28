@@ -1,11 +1,11 @@
 import React from 'react';
-import Posts from 'component/Posts';
 import { BLUE_WATER } from 'constants/common';
 import { useAppSelector } from 'customHooks/redux/useAppSelector';
 import { getUsers } from 'store/users/selectors';
 import { IUserItem } from 'store/users/types';
 import styled from 'styled-components';
 import PhotosContainer from 'container/PhotosContainer';
+import PostsContainer from 'container/PostsContainer';
 
 const Wrapper = styled.div`
   width: 467px;
@@ -46,7 +46,7 @@ const Item = () => {
               <Paragraph>Auth: {item.name}</Paragraph>
               <Paragraph>Company: {item.company.name} </Paragraph>
             </WrapperParagraph>
-            <Posts id={item.id} />
+            <PostsContainer id={item.id} />
           </Wrapper>
         );
       })}

@@ -2,8 +2,9 @@ import React from 'react';
 import { useWindowSize } from 'customHooks/useWindowSize';
 import { MOBILE_SIZE } from 'constants/common';
 import styled from 'styled-components';
-import Title from './Title';
-import Body from './Body';
+import Body from 'component/Posts/Body';
+import TitleContainer from './TitleContainer';
+import BodyContainer from './BodyContainer';
 
 interface IProps {
   id: number;
@@ -21,21 +22,21 @@ const WrapperBody = styled.div`
   margin-top: 20px;
 `;
 
-const Posts: React.FC<IProps> = ({ id }) => {
+const PostsContainer: React.FC<IProps> = ({ id }) => {
   const windowSize = useWindowSize();
 
   return (
     <>
       <WrapperTitle>
-        <Title id={id} />
+        <TitleContainer id={id} />
       </WrapperTitle>
       {windowSize.width > MOBILE_SIZE ? (
         <WrapperBody>
-          <Body id={id} />
+          <BodyContainer id={id} />
         </WrapperBody>
       ) : null}
     </>
   );
 };
 
-export default Posts;
+export default PostsContainer;
