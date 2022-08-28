@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { useAppDispatch } from 'customHooks/redux/useAppDispatch';
 import { useAppSelector } from 'customHooks/redux/useAppSelector';
-import { BLUE_WATER, GRAY } from 'constants/common';
+import { BLUE_WATER } from 'constants/common';
 import styled from 'styled-components';
-import ButtonComponent from './Button';
+import InputComponent from 'component/Auth/Input';
 import { changeInputLogin, changeInputPassword } from '../../store/auth/slice';
 import { getAuth, getLogin, getPassword } from '../../store/auth/selectors';
+import ButtonContainer from './ButtonContainer';
 
 const Form = styled.form`
   padding: 20px 10px 10px 10px;
@@ -41,24 +42,7 @@ const Label = styled.label`
   }
 `;
 
-const Input = styled.input`
-  border: 4px solid black;
-  border-color: ${(props) => props.color};
-  border-radius: 10px;
-  padding: 3px;
-  font-weight: 800;
-  background-color: ${GRAY};
-  font-size: 24px;
-  @media ${(props) => props.theme.phone} {
-    width: 100%;
-  }
-
-  &:focus {
-    outline: none;
-  }
-`;
-
-const Auth = () => {
+const AuthContainer = () => {
   const dispatch = useAppDispatch();
   const refInput = useRef<any>();
   const loginValue: string | undefined = useAppSelector(getLogin);
@@ -82,26 +66,23 @@ const Auth = () => {
       Autorization
       <Label>
         login
-        <Input
-          type="email"
-          onChange={handleChangeLogin}
+        <InputComponent
+          handleChange={handleChangeLogin}
           value={loginValue}
           color={isAuth !== 'no' ? BLUE_WATER : 'red'}
-          ref={refInput}
         />
       </Label>
       <Label>
         password
-        <Input
-          type="password"
-          onChange={handleChangePassword}
+        <InputComponent
+          handleChange={handleChangePassword}
           value={passwordValue}
           color={isAuth !== 'no' ? BLUE_WATER : 'red'}
         />
       </Label>
-      <ButtonComponent />
+      <ButtonContainer />
     </Form>
   );
 };
 
-export default Auth;
+export default AuthContainer;
