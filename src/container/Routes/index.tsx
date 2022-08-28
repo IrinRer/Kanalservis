@@ -2,8 +2,8 @@ import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { ROUTES } from 'constants/routes';
 import Error from 'common/Error';
-import ErrorBoundary from 'container/ErrorBoundary';
-import Header from 'common/Header';
+import HeaderContainer from 'container/HeaderContainer';
+import ErrorBoundary from 'common/ErrorBoundary';
 import AuthPage from 'pages/Auth';
 import Home from 'pages/Home';
 import PrivateRoute from './PrivateRoute';
@@ -12,7 +12,7 @@ const CreateRoutes: React.FC = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ErrorBoundary>
-          <Header />
+          <HeaderContainer />
           <Routes>
             <Route
               path={ROUTES.home.path}
